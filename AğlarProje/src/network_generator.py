@@ -113,12 +113,13 @@ class NetworkManager:
 if __name__ == "__main__":
     nm = NetworkManager()
     
-    # 1. TEST: Rastgele Mod
-    G_rnd, d_rnd = nm.generate_random(num_nodes=20)
+    # 1. Rastgele Modu 
+    # G_rnd, d_rnd = nm.generate_random(num_nodes=20) 
     
-    # 2. TEST: Dosya Modu (Dosyaların proje ana dizininde 'data' klasöründe olduğunu varsayıyoruz)
-    # G_file, d_file = nm.load_from_csv(
-    #     'data/BSM307_317_Guz2025_TermProject_NodeData.csv',
-    #     'data/BSM307_317_Guz2025_TermProject_EdgeData.csv',
-    #     'data/BSM307_317_Guz2025_TermProject_DemandData.csv'
-    # )
+    # 2. Dosya Modu
+    # Değişken isimlerini 'G' ve 'demands' olarak sadeleştirebilirsin
+    G, demands = nm.load_from_csv(
+        'data/BSM307_317_Guz2025_TermProject_NodeData.csv',
+        'data/BSM307_317_Guz2025_TermProject_EdgeData.csv',
+        'data/BSM307_317_Guz2025_TermProject_DemandData.csv'
+    )
